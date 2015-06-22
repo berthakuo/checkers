@@ -1,0 +1,45 @@
+/*box sizing*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+.container {
+	width: 482px;
+	height: 482px;
+	margin: 0 auto;
+	border: solid 1px dimgray;
+}
+
+.square {
+	border: solid 1px dimgray;
+	float:left;
+	width:60px;
+	height:60px;
+}
+
+.piece {
+	border-radius:30px;
+	width: 50px;
+	height: 50px;
+	border: solid 1px;
+	margin: 0 auto;
+}
+
+.piece--red {
+	background-color: red;
+	border-color: red;
+}
+
+.piece--black {
+	background-color: black;
+	border-color: black;
+}
+
+
+
