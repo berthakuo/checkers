@@ -8,6 +8,7 @@ reset();
 // ************************************************************************
 var selectedPiece = {};
 var selectedSquare = {};
+var opponentPiece;
 
 // ************************************************************************
 // EVENT HANDLERS
@@ -68,9 +69,19 @@ function moveChecker(){
 	selectedSquare.holder.append(selectedPiece.holder);
 }
 
+function removeOpponent(op){
+	if ($(op).children().length != 0) {
+		$(op).children().remove();
+		moveChecker();
+	}
+	else {
+		console.log("wrong move buddy!");
+	}
+}
+
 function convertToID(x,y) {
-	number = (y-1)*8 + x;
-	return "square" + number;
+	var number = (y-1)*8 + x;
+	return "#square" + number;
 }
 
 function checkMove(){
@@ -82,15 +93,17 @@ function checkMove(){
 			moveChecker();
 		}
 		else if (selectedPiece.x + 2 == selectedSquare.x && selectedPiece.y + 2 == selectedSquare.y) {
-			moveChecker();
-			removeOpponent();
+			opponentX = selectedPiece.x + 1;
+			opponentY = selectedPiece.y + 1;
+			removeOpponent(convertToID(opponentX,opponentY));
 		}
 		else if (selectedPiece.x - 2 == selectedSquare.x && selectedPiece.y + 2 == selectedSquare.y) {
-			moveChecker();
-			removeOpponent();
+			opponentX = selectedPiece.x - 1;
+			opponentY = selectedPiece.y + 1;
+			removeOpponent(convertToID(opponentX,opponentY));
 		}
 		else {
-			console.log("wrong move buddy!")
+			console.log("wrong move buddy!");
 		}
 	else {
 		if (selectedPiece.x + 1 == selectedSquare.x && selectedPiece.y - 1 == selectedSquare.y) {
@@ -100,12 +113,14 @@ function checkMove(){
 			moveChecker();
 		}
 		else if (selectedPiece.x + 2 == selectedSquare.x && selectedPiece.y - 2 == selectedSquare.y) {
-			moveChecker();
-			removeOpponent();
+			opponentX = selectedPiece.x + 1;
+			opponentY = selectedPiece.y - 1;
+			removeOpponent(convertToID(opponentX,opponentY));
 		}
 		else if (selectedPiece.x - 2 == selectedSquare.x && selectedPiece.y - 2 == selectedSquare.y) {
-			moveChecker();
-			removeOpponent();
+			opponentX = selectedPiece.x - 1;
+			opponentY = selectedPiece.y - 1;
+			removeOpponent(convertToID(opponentX,opponentY));
 		}
 		else {
 			console.log("wrong move buddy!")

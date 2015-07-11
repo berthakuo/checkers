@@ -1,0 +1,881 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"selecte",
+				"selectedPiece"
+			],
+			[
+				"selec",
+				"selectedPiece"
+			],
+			[
+				"data",
+				"data-bind"
+			],
+			[
+				"text",
+				"text--left"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"show",
+				"showPosition"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"to",
+				"toUpperCase"
+			],
+			[
+				"filter",
+				"filterCategories"
+			],
+			[
+				"temp",
+				"tempArray"
+			],
+			[
+				"filtered",
+				"filteredResults"
+			],
+			[
+				"get",
+				"getFilterParam"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"rand",
+				"randWhiteBoxes"
+			],
+			[
+				"flip",
+				"flipAll"
+			],
+			[
+				"heig",
+				"min-height"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"center",
+				"center-box"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"reverseArray",
+				"reverseArrayInPlace"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"st",
+				"border-style"
+			],
+			[
+				"bott",
+				"bottom"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"a",
+				"text-align"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"backgroun",
+				"background-size"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"saved",
+				"savedBarResults"
+			],
+			[
+				"toggle",
+				"toggleClass"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"top",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"fill",
+				"fillColor"
+			],
+			[
+				"map",
+				"map-canvas"
+			],
+			[
+				"open",
+				"openHours"
+			],
+			[
+				"op",
+				"opening_hours"
+			],
+			[
+				"resul",
+				"result_ref"
+			],
+			[
+				"create",
+				"createMarkers"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"res",
+				"restaurant"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"players",
+				"playersScore"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"bottom",
+				"border-bottom"
+			],
+			[
+				"head",
+				"head	Tag"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"H",
+				"H1	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "function selectSquare(event, selectedPiece){\n	var square = $(event.target);\n	var piece = selectedPiece.piece;\n	var squareX = parseInt(square.attr(\"data-row\"));\n	var squareY = parseInt(square.attr(\"data-column\"));\n\n\n	var validMoves = [];\n\n	//is this a valid move\n	//remove chcker from previous square\n	$(\".selected\").remove()\n\n	//add checker to selected square\n	square.append(piece);\n\n}\n",
+			"settings":
+			{
+				"buffer_size": 386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/normalize.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 831,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "//test\n// $(\"#square15\").append(\"<div class='piece red'></div>\");\n\nreset();\n\n// ************************************************************************\n// VARIABLES\n// ************************************************************************\nvar selectedPiece = {};\nvar selectedSquare = {};\n\n// ************************************************************************\n// EVENT HANDLERS\n// ************************************************************************\n$(\".piece\").click(function(e) {\n	selectedPiece = selectPiece(e);\n});\n$(\".square\").click(selectSquare);\n$(document).keypress(function(e) {\n    if(e.which == 13) {\n        checkMove();\n    }\n});\n\nvar board = [\n	[{ type: 'red' }, { type:null }, { type: 'red' }],\n	[{ type: 'red' }, { type:null }, { type: 'red' }],\n	[{ type: 'red' }, { type:null }, { type: 'red' }]\n];\n\n// ************************************************************************\n// FUNCTIONS\n// ************************************************************************\n\nfunction reset() {\n	//remove all leftover pieces from the board\n	$(\".piece\").remove();\n\n	//setup red pieces\n	$(\"[data-row='1']:nth-child(even)\").append(\"<div class='piece red'></div>\");\n	$(\"[data-row='2']:nth-child(odd)\").append(\"<div class='piece red'></div>\");\n	$(\"[data-row='3']:nth-child(even)\").append(\"<div class='piece red'></div>\");\n\n	//setup black pieces\n	$(\"[data-row='6']:nth-child(odd)\").append(\"<div class='piece black'></div>\");\n	$(\"[data-row='7']:nth-child(even)\").append(\"<div class='piece black'></div>\");\n	$(\"[data-row='8']:nth-child(odd)\").append(\"<div class='piece black'></div>\");\n}\n\nfunction Selection(holder, x, y, color) {\n	this.holder = holder;\n	this.x = x;\n	this.y = y;\n	this.color = color;\n}\n\nfunction selectPiece(event){\n	var piece = $(event.target);\n	var square = $(piece.parent(\".square\"));\n	var y = parseInt(square.attr(\"data-row\"));\n	var x = parseInt(square.attr(\"data-column\"));\n	var color = piece.hasClass(\"red\")? 'red': 'black';\n	return new Selection(piece, x, y, color);\n}\n\nfunction selectSquare(event){\n	var square = $(event.target);\n	var y = parseInt(square.attr(\"data-row\"));\n	var x = parseInt(square.attr(\"data-column\"));\n	selectedSquare = new Selection (square, x, y)\n}\n\nfunction moveChecker(){\n	//add checker to selected square\n	//QUESTION - not sure why I dont need a remove function too\n	selectedSquare.holder.append(selectedPiece.holder);\n}\n\n// function convertToID(x,y) {\n// 	number = (y-1)*8 + x;\n// 	return \"square\" + number;\n// }\n\nfunction checkMove(){\n	if (selectedPiece.color == 'red')\n		if (selectedPiece.x + 1 == selectedSquare.x && selectedPiece.y + 1 == selectedSquare.y) {\n			moveChecker();\n		}\n		else if (selectedPiece.x - 1 == selectedSquare.x && selectedPiece.y + 1 == selectedSquare.y) {\n			moveChecker();\n		}\n		else if (selectedPiece.x + 2 == selectedSquare.x && selectedPiece.y + 2 == selectedSquare.y) {\n			moveChecker();\n			removeOpponent();\n		}\n		else if (selectedPiece.x - 2 == selectedSquare.x && selectedPiece.y + 2 == selectedSquare.y) {\n			moveChecker();\n			removeOpponent();\n		}\n		else {\n			console.log(\"wrong move buddy!\")\n		}\n	else {\n		if (selectedPiece.x + 1 == selectedSquare.x && selectedPiece.y - 1 == selectedSquare.y) {\n			moveChecker();\n		}\n		else if (selectedPiece.x - 1 == selectedSquare.x && selectedPiece.y - 1 == selectedSquare.y) {\n			moveChecker();\n		}\n		else if (selectedPiece.x + 2 == selectedSquare.x && selectedPiece.y - 2 == selectedSquare.y) {\n			moveChecker();\n			removeOpponent();\n		}\n		else if (selectedPiece.x - 2 == selectedSquare.x && selectedPiece.y - 2 == selectedSquare.y) {\n			moveChecker();\n			removeOpponent();\n		}\n		else {\n			console.log(\"wrong move buddy!\")\n		}\n	}\n}\n\n\n\n\n",
+			"file": "js/main.js",
+			"file_size": 3472,
+			"file_write_time": 1435535953000000,
+			"settings":
+			{
+				"buffer_size": 3673,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/berthakuo/Desktop/checkers/js/main.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing.html",
+		"/Users/berthakuo/Documents/student dashboard/.bowerrc",
+		"/Users/berthakuo/Documents/student dashboard/dev/assets/sass/vars.scss",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-meals.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-meals.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/assets/sass/helpers.scss",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-staff.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-staff.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/common/common-links.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/common/common-links.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-sidebar.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/housing-page/housing-sidebar.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/index.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/degree-audit.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/degree-audit.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/registration-status.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/registration-status.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/academic.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/finance-page/finance-transactions.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/finance-page/finance-calendar.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/finance-page/finance.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/app.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/app/dashboard.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/academic-sidebar.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/academic-pe.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/academic-pe.js",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/academic-page/academic-sidebar.html",
+		"/Users/berthakuo/Documents/student dashboard/dev/components/finance-page/finance.html",
+		"/Library/LaunchDaemons/homebrew.mxcl.nginx.plist",
+		"/usr/local/etc/nginx/sites-enabled/student-dashboard-local",
+		"/usr/local/etc/nginx/nginx.conf",
+		"/Users/berthakuo/Documents/student dashboard/README.md",
+		"/Users/berthakuo/Documents/student dashboard/local.json",
+		"/Users/berthakuo/Documents/trunk/local.json",
+		"/Users/berthakuo/Documents/sp15p1/common/templates/form.html",
+		"/Users/berthakuo/Documents/sp15p1/gradebook/templates/assignment_list/form.html",
+		"/Users/berthakuo/Documents/sp15p1/gradebook/javascript/assignment.js",
+		"/Users/berthakuo/Documents/sp15p1/calendar/index.html",
+		"/Users/berthakuo/Documents/sp15p1/common/javascript/model.js",
+		"/Users/berthakuo/Documents/trunk/package.json",
+		"/Users/berthakuo/Documents/sp15p1/local.json",
+		"/Users/berthakuo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/berthakuo/Desktop/mapbox practice/index.html",
+		"/Users/berthakuo/Desktop/mapbox practice/index1.html",
+		"/Users/berthakuo/Desktop/index.html",
+		"/Users/berthakuo/Desktop/projects/Portfolio April/images/.picasa.ini",
+		"/Users/berthakuo/Desktop/projects/Portfolio April/css/style2.css",
+		"/Users/berthakuo/Desktop/projects/Portfolio April/library_checkout.html",
+		"/Users/berthakuo/Desktop/projects/Portfolio April/css/style.css",
+		"/Users/berthakuo/Desktop/projects/Portfolio April/index.html",
+		"/Users/berthakuo/Desktop/projects/closing_time/maptest.html",
+		"/Users/berthakuo/Desktop/practicemap.html",
+		"/Users/berthakuo/Desktop/Union Square Donuts 3/menu.html",
+		"/Users/berthakuo/Desktop/Closing Time 4/index.html",
+		"/Users/berthakuo/Desktop/startup_matchmaker_solution/index.html",
+		"/Users/berthakuo/Desktop/startup_matchmaker_solution/js/main.js",
+		"/Users/berthakuo/Desktop/startup_matchmaker_solution/css/main.css",
+		"/Users/berthakuo/Desktop/GA FEWD/matching/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/matching/js/main.js",
+		"/Users/berthakuo/Desktop/Union Square Donuts/js/main.js",
+		"/Users/berthakuo/Desktop/rock_paper_scissors_Obfuscated/js/index.js",
+		"/Users/berthakuo/Desktop/GA FEWD/fashion_blog/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/startup_matchmaker/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/startup_matchmaker/index.html",
+		"/Users/berthakuo/Downloads/layouts-competition/layout-comp-0/index.html",
+		"/Users/berthakuo/Downloads/layouts-competition/layout-comp-0/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/class 3 code/fashion_blog_part1/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/class 3 code/fashion_blog_part1/index.html",
+		"/Users/berthakuo/Desktop/GA FEWD/In class practice/css/style.css",
+		"/Users/berthakuo/Desktop/GA FEWD/In class practice/resume.html",
+		"/Users/berthakuo/Desktop/GA FEWD/In class practice/index.html",
+		"/Users/berthakuo/Desktop/GA Front End Web Development/Bresume/index.html",
+		"/Users/berthakuo/Desktop/GA Front End Web Development/Bresume/style.css",
+		"/Users/berthakuo/Desktop/websitewaters-island01-stage01/index.html",
+		"/Users/berthakuo/Downloads/starter_code/ga_press_release/index.html",
+		"/Users/berthakuo/Desktop/GA Front End Web Development/index.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"w=\"1\"",
+			"\"square\"",
+			"class=\"square\"",
+			"ss=\"square\"",
+			"class=\"square\"",
+			"\"square\"",
+			"data-row=\"1\" data-column",
+			"data-row=",
+			"data-row",
+			"data-column",
+			"data-column=\"1\"",
+			"\"1\"",
+			"id",
+			"data-row=\"1\"",
+			"red",
+			"getAttribute",
+			"id=",
+			"Move",
+			"square",
+			"page",
+			"FinancePageViewModel",
+			"lines",
+			"Add",
+			"upload",
+			"button-group",
+			"role",
+			"/a",
+			"Delete",
+			"remove",
+			"popover",
+			"startDate",
+			"Edit",
+			"Remove",
+			"error",
+			"multiple",
+			"remove",
+			"delete",
+			"displayWar",
+			"Delete",
+			"displayWarning",
+			"Delete A",
+			"Delete Folder",
+			"Delete Mat",
+			"Delete",
+			"title",
+			"Delete",
+			"Remove",
+			"title",
+			"dialogViewMod",
+			"isDele",
+			"warnModal",
+			"confirm",
+			"confirmC",
+			"confirm",
+			"mixed",
+			"ko.",
+			"dropdown",
+			".navbar__course--name",
+			".navbar_nav",
+			"link",
+			".getJson",
+			"store",
+			"description",
+			"type",
+			"name",
+			"hide",
+			"start",
+			"back",
+			"initialize",
+			"intialize",
+			"front",
+			"showAllFront",
+			"redBoxes",
+			"red",
+			"inner",
+			"map",
+			"initialize",
+			"content",
+			"center",
+			"box",
+			"drop",
+			"fixed",
+			"bottom-box",
+			"orange",
+			"buton",
+			"logo",
+			"vertical-align",
+			"center-box",
+			"center",
+			"#content",
+			".content",
+			"center-box",
+			".center-box",
+			"button",
+			".main",
+			"left",
+			"nav",
+			"color",
+			"float",
+			"savedRe",
+			"input",
+			"createMarker",
+			"savedResults",
+			"fa",
+			"var cam",
+			"cambridge",
+			"showpos",
+			"inner",
+			"function",
+			"function()",
+			"Yellow",
+			"createMar",
+			"click",
+			"overflow",
+			"marker",
+			"16px",
+			"16",
+			"red",
+			"request",
+			"key",
+			"request"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 5525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								386,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/normalize.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 3673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								828,
+								828
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"registration",
+				"dev/components/academic-page/registration-dates/registration-dates.js"
+			],
+			[
+				"",
+				".bowerrc"
+			],
+			[
+				"help",
+				"dev/assets/sass/helpers.scss"
+			],
+			[
+				"var.scss",
+				"dev/assets/sass/vars.scss"
+			],
+			[
+				"comm/java/mo",
+				"common/javascript/model.js"
+			],
+			[
+				"cale/eve",
+				"calendar/javascript/eventEditor.js"
+			],
+			[
+				"material/java/drive",
+				"materials/javascript/drive.js"
+			],
+			[
+				"member/java/group",
+				"membership/javascript/groups.js"
+			],
+			[
+				"member/java/se",
+				"membership/javascript/message.js"
+			],
+			[
+				"comm/java/view",
+				"common/javascript/view.js"
+			],
+			[
+				"gradebook/javascript/ass",
+				"gradebook/javascript/assignments.js"
+			],
+			[
+				"gradebook/ja/ass",
+				"gradebook/javascript/assignment.js"
+			],
+			[
+				"mem/ja/staf",
+				"membership/javascript/staff.js"
+			],
+			[
+				"comm/temp/f",
+				"common/templates/form.html"
+			],
+			[
+				"calendar/in",
+				"calendar/index.html"
+			],
+			[
+				"con/tem/fo",
+				"common/templates/form.html"
+			],
+			[
+				"assignmentform",
+				"gradebook/templates/assignment_list/form.html"
+			],
+			[
+				".json",
+				"local.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"_nav",
+				"common/sass/_nav.scss"
+			],
+			[
+				"app",
+				"common/javascript/foundation/app.js"
+			],
+			[
+				"assignmentlistform",
+				"gradebook/templates/assignment_list/form.html"
+			],
+			[
+				"_button",
+				"common/sass/_buttons.scss"
+			],
+			[
+				"navbar.sc",
+				"common/bower_components/foundation/scss/foundation/components/modules/_navbar.scss"
+			],
+			[
+				"img",
+				"images/.picasa.ini"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true
+}
